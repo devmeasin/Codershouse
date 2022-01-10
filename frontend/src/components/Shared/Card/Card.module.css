@@ -1,0 +1,23 @@
+.card {
+    width: 650px !important;
+    max-width: 90%;
+    color: #fff !important;
+}
+.card_body { 
+    text-align:center;
+    padding: 60px 120px;
+}
+
+.card_title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.card_title h5 {
+    margin: 0px;
+    font-size:22px;
+    font-weight: 700;
+}

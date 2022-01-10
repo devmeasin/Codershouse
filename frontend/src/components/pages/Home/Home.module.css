@@ -1,0 +1,27 @@
+.homewrapper p {
+    font-family: Nunito;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 17px;
+    line-height: 36px;
+    /* or 164% */
+    text-align: center;
+    color: #C4C5C5;
+    margin-bottom: 50px;
+}
+
+.link {
+    font-family: Nunito;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 22px;
+    margin-right: 10px;
+}
+
+.link2 {
+    font-family: Nunito;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 16px;
+}

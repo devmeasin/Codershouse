@@ -1,0 +1,17 @@
+.buttonwrapper {
+    display: block;
+    margin-bottom: 20px;
+}
+
+.button {
+    font-family: Nunito !important;
+    font-style: normal !important;
+    font-weight: bold !important;
+    font-size: 18px !important;
+    line-height: 25px !important;
+    color: #FFFFFF !important; 
+}
+
+.button img {
+    margin: 0px 8px;
+}

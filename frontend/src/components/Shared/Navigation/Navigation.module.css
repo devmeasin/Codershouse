@@ -1,0 +1,17 @@
+.navbar {
+    padding: 20px 0;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+.logo img {
+    width: 26px;
+}
+.logo span {
+    margin: 0 10px;
+    font-weight: bold;
+    color: #fff;
+    line-height: 20px;
+}

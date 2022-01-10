@@ -1,0 +1,22 @@
+.stepemailphone {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 19px;
+}
+
+.stepemailphone button {
+    border: none;
+    outline: none;
+    width:60px;
+    height:60px;
+    background-color:#262626;    ;
+    border-radius:10px;
+}
+
+.stepemailphone button:last-child {
+    margin-left: 10px;
+}
+
+.active {
+    background-color:#0077FF !important;
+}
