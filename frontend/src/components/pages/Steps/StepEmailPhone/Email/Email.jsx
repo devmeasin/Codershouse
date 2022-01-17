@@ -16,7 +16,7 @@ const Email = ({onNext}) => {
                     value = {email}
                     width="240px"
                     type="email"
-                    className="input_box "
+                    className="input_box"
                     placeholder="easinwebpro@gmail.com"
                     color="#262626"/>
                 <ButtonX onClick={() => onNext(2)} text="Next"/>

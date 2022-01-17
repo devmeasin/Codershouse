@@ -27,7 +27,7 @@ const StepOtp = () => {
 
         } catch (e) {
             notify()
-            console.log(e.message)
+            console.log(e.message);
         }
 
     }

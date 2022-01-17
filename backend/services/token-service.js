@@ -4,6 +4,7 @@ const RefreshModel = require('../models/refresh-model');
 
 class tokenService {
 
+    // generateToken here
     generateToken = (payload) => {
 
         const accessToken = jwt.sign(payload, accessTokenSecret, {
@@ -16,6 +17,7 @@ class tokenService {
         return { accessToken, refreshToken };
     }
 
+    // store refreshToken in Database
     storeRefreshToken = async (token, userId) => {
         try {
             await RefreshModel.create({
@@ -26,6 +28,13 @@ class tokenService {
         } catch (err) {
             console.log(err);
         }
+    }
+
+
+    //Verify Access Token Here
+
+    verifyAccessToken = async (token) => {
+        return jwt.verify(token, accessTokenSecret);
     }
 
 }

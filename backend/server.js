@@ -1,6 +1,7 @@
 console.clear();
 
 const express = require('express');
+const cookieParser = require('cookie-parser');
 const cors = require('cors');
 const connectDB = require('./database');
 const { PORT } = require('./config');
@@ -17,9 +18,12 @@ connectDB();
 
 const app = express();
 
+app.use('/storage' , express.static('storage'));
+app.use(cookieParser());
+
 app.use(cors(corsOption));
 
-app.use(express.json());
+app.use(express.json({ limit: '8mb' }));
 app.use(router);
 
 app.listen(port, () => console.log(`server is running on port ${port}`));

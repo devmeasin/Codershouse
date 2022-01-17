@@ -7,7 +7,15 @@ const userSchema = new Schema({
         type: 'String',
         require: true
     },
-    active: {
+    name : {
+        type: 'String',
+        require: false
+    },
+    avatar : {
+        type: 'String',
+        require: false
+    },
+    activated : {
         type: 'Boolean',
         require: false,
         default: false

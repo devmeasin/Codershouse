@@ -1,0 +1,30 @@
+.avatar_wrapper {
+}
+
+.avatar_wrapper p {
+    font-size: 14px;
+    margin-top: -25px;
+}
+
+.avatar_label{
+    color: #0077FF;
+    font-size:14px;
+    font-weight:400;
+    cursor: pointer;
+    margin: 20px 0px;
+}
+
+.image_wrapper {
+    width: 150px;
+    height: 150px;
+    border: 6px solid rgb(255, 251, 0);
+    border-radius: 50%;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.image_wrapper img {
+    width: 95%;
+    height: 95%;
+    object-fit: cover;
+}

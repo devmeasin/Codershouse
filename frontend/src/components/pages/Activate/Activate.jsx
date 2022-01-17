@@ -1,9 +1,26 @@
-import React from 'react'
+import React, { useState } from 'react';
+import StepAvatar from '../Steps/StepAvatar/StepAvatar';
+import StepName from '../Steps/StepName/StepName';
+
+const steps = {
+   1 : StepName,
+   2 : StepAvatar
+}
 
 const Activate = () => {
+
+    const [step , setStep] = useState(1);
+
+    const Step = steps[step];
+
+    const onNext = (stepNumber) => {
+        setStep(stepNumber)
+    }
+
+
     return (
         <div>
-            <h1>Activate</h1>
+            <Step onNext = {onNext}/>
         </div>
     )
 }

@@ -11,10 +11,10 @@ const StepEmailPhone = ({onNext}) => {
         <div className="card-wrapper-center">
             <div>
                 <div className={styles.stepemailphone}>
-                    <button className = {toggle === 'phone' && styles.active} onClick={() => setToggle('phone')}>
+                    <button className = {toggle === 'phone' ? styles.active : ''} onClick={() => setToggle('phone')}>
                         <img src="/src/images/phone.png" alt="phone_image"/>
                     </button>
-                    <button className = {toggle === 'email' && styles.active} onClick={() => setToggle('email')}>
+                    <button className = {toggle === 'email' ? styles.active : ''} onClick={() => setToggle('email')}>
                          <img src="/src/images/email.png" alt="email_image"/>
                     </button>
                 </div>

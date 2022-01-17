@@ -19,7 +19,6 @@ const Phone = ({onNext}) => {
 
         let {data} = await sendOtp({phone});
         dispatch(setOtp(data));
-        console.log(data);
         onNext(2)
 
       } catch(error) {
@@ -36,7 +35,7 @@ const Phone = ({onNext}) => {
                         onChange={(event) => setPhone(event.target.value)}
                         value={phone}
                         width="240px"
-                        className="input_box "
+                        className="input_box"
                         placeholder="+88019000000"
                         color="#262626"/>
                     <ButtonX onClick={(_) =>  sendOtpHandler()} text="Next"/>

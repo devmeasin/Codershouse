@@ -1,7 +1,8 @@
 require('dotenv').config();
 
 const PORT = process.env.PORT;
-const DB_URL = process.env.DB_URL;
+const DB_URL = process.env.DB_URL;        
+const BaseUrl = process.env.BaseUrl;        
 
 const HASH_SECRET = process.env.HASH_SECRET;
 const SMS_SID = process.env.SMS_SID;
@@ -13,6 +14,7 @@ const refreshTokenSecret = process.env.refreshTokenSecret;
 const config = {
     PORT,
     DB_URL,
+    BaseUrl,
     HASH_SECRET,
     SMS_SID,
     SMS_AUTH_TOKEN,

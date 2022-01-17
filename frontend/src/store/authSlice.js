@@ -23,15 +23,11 @@ export const authSlice = createSlice({
             const { user } = action.payload;
             state.user = user;
             state.isAuth = true;
-        },
-        
-        incrementByAmount: (state, action) => {
-            state.value += action.payload
-        },
+        }
     },
 })
 
 // Action creators are generated for each case reducer function
-export const { setOtp, setAuth, incrementByAmount } = authSlice.actions
+export const { setOtp, setAuth } = authSlice.actions
 
-export default authSlice.reducer
+export default authSlice.reducer;

@@ -44,7 +44,7 @@ class authController {
 
         const { hash, phone, otp } = req.body;
 
-       // check all data in req body here
+        // check all data in req body here
         if (!hash || !phone || !otp) {
             res.status(400).json({ message: "All flied are required" });
         }
@@ -59,13 +59,15 @@ class authController {
 
         const data = `${phone}.${otp}.${expires}`;
 
-
+        //valid or not valid otp and hash
         const isValid = await otpService.verifyOtp(hashOtp, data);
 
         if (!isValid) {
             res.status(400).json({ message: "Invalid OTP!" });
         }
 
+
+        //find new User and create New User
         let user;
 
         try {
@@ -84,7 +86,9 @@ class authController {
 
         // refreshToken Save to Database
         await tokenService.storeRefreshToken(refreshToken, user._id)
+        
 
+        //send token client here using cookies.
         res.cookie('accessToken', accessToken, {
             maxAge: 1000 * 60 * 60,
             httpOnly: true
@@ -93,7 +97,8 @@ class authController {
             maxAge: 1000 * 60 * 60 * 24 * 30,
             httpOnly: true
         });
-
+        
+        //user data and accessToken send json client.
         const userDto = new UserDto(user);
 
         res.status(200).json({ user: userDto, accessToken });
